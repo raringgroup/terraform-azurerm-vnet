@@ -14,7 +14,7 @@
 ## limitations under the License.
 ## ----------------------------------------------------------------------------
 ##
-##  modules/vnet/_variables.tf
+## _variables.tf
 ##
 ##  Input variables for the virtual network module.
 ## ----------------------------------------------------------------------------

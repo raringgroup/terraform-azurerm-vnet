@@ -16,12 +16,12 @@
 
 # TERRAGRUNT — VNET EXAMPLE
 # ------------------------------------------------------------------------------
-# modules/vnet/examples/complete/terragrunt.hcl
+# examples/complete/terragrunt.hcl
 #
 # Deploys the vnet example to Azure. Generates the azurerm provider and backend
 # and passes the standard context inputs.
 #
-# Module: modules/vnet
+# Module: terraform-azurerm-vnet
 # ------------------------------------------------------------------------------
 
 locals {

@@ -14,17 +14,16 @@
 ## limitations under the License.
 ## ----------------------------------------------------------------------------
 ##
-##  modules/vnet/examples/complete/vnet.tf
+## examples/complete/vnet.tf
 ##
 ##  Creates a resource group and a virtual network with the vnet module.
 ## ----------------------------------------------------------------------------
 
 ## Resource Group
-module "resource_group" {
-  source  = "../../../resource-group"
-  context = module.context.self
-
+resource "azurerm_resource_group" "this" {
   location = var.region
+  name     = module.context.id
+  tags     = module.context.tags
 }
 
 
@@ -35,6 +34,6 @@ module "vnet" {
 
   address_space       = ["10.0.0.0/16"]
   dns_servers         = []
-  location            = module.resource_group.location
-  resource_group_name = module.resource_group.name
+  location            = azurerm_resource_group.this.location
+  resource_group_name = azurerm_resource_group.this.name
 }

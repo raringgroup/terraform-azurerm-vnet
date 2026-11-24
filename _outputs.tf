@@ -14,7 +14,7 @@
 ## limitations under the License.
 ## ----------------------------------------------------------------------------
 ##
-##  modules/vnet/_outputs.tf
+## _outputs.tf
 ##
 ##  Output values for the virtual network module.
 ## ----------------------------------------------------------------------------
