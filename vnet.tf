@@ -14,7 +14,7 @@
 ## limitations under the License.
 ## ----------------------------------------------------------------------------
 ##
-##  modules/vnet/vnet.tf
+## vnet.tf
 ##
 ##  Azure virtual network named and tagged from the context module.
 ##  Subnets are managed by the subnets module, not inline.
@@ -22,7 +22,7 @@
 
 ## Virtual Network Context
 module "vnet_context" {
-  source  = "../null-context"
+  source  = "git::https://github.com/raringgroup/terraform-null-context.git?ref=v0.1.0"
   context = module.context.self
 
   attributes = ["vnet"]
